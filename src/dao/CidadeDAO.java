@@ -52,6 +52,24 @@ public class CidadeDAO {
     }
     
     
+    public static Cidade getCidadeByCodigo(int codigo){
+        Cidade cid = new Cidade();
+        String sql = "SELECT codigo, nome FROM cidades "
+                   + " WHERE codigo = " + codigo ;
+        ResultSet rs = Conexao.consultar( sql );
+        
+        try {
+            rs.first();
+            cid.setCodigo( rs.getInt( 1 ) );
+            cid.setNome( rs.getString( 2 ) );
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+        
+        return cid;
+    }
+    
+    
 }
 
 

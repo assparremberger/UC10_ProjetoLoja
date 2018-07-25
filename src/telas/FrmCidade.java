@@ -18,10 +18,24 @@ public class FrmCidade extends javax.swing.JInternalFrame {
     /**
      * Creates new form FrmCidade
      */
+    
+    private boolean novo;
+    private Cidade cidade;
+    
     public FrmCidade() {
         initComponents();
         lblCodigo.setText("");
+        novo = true;
+        cidade = new Cidade();
     }
+    
+    public FrmCidade( int codigo) {
+        initComponents();
+        novo = false;
+        cidade = CidadeDAO.getCidadeByCodigo( codigo );
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

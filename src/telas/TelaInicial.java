@@ -166,7 +166,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_menuCadastrarProdutoActionPerformed
 
     private void menuListarCidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListarCidadesActionPerformed
-        ListCidades tela = new ListCidades();
+        ListCidades tela = new ListCidades( jdpTelaInicial );
         jdpTelaInicial.add( tela );
         tela.setVisible( true );
     }//GEN-LAST:event_menuListarCidadesActionPerformed
